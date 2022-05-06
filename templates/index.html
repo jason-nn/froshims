@@ -1,5 +1,35 @@
 {% extends 'layout.html' %} {% block body %}
 
-<p>Index Page</p>
+<h1>Register</h1>
+<form action="/validate" method="post">
+  <div>
+    <span>Name&nbsp;&nbsp;&nbsp;</span>
+    <input
+      autocomplete="off"
+      autofocus
+      name="Name"
+      placeholder="Jason"
+      type="text"
+    />
+  </div>
+
+  <br />
+
+  <div>
+    <span>Sport&nbsp;&nbsp;&nbsp;</span>
+    <select name="sport">
+      <option selected disabled>Select</option>
+      <option value="basketball">Basketball</option>
+      <option value="soccer">Soccer</option>
+      <option value="frisbee">Frisbee</option>
+    </select>
+  </div>
+
+  <br />
+
+  <div>
+    <input type="submit" value="Register" />
+  </div>
+</form>
 
 {% endblock %}
