@@ -19,9 +19,9 @@
     <span>Sport&nbsp;&nbsp;&nbsp;</span>
     <select name="sport">
       <option selected disabled>Select</option>
-      <option value="basketball">Basketball</option>
-      <option value="soccer">Soccer</option>
-      <option value="frisbee">Frisbee</option>
+      {% for sport in sports%}
+      <option value="{{sport}}">{{ sport.title() }}</option>
+      {% endfor %}
     </select>
   </div>
 
