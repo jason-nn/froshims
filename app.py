@@ -3,7 +3,7 @@ from flask import Flask, redirect, render_template, request
 app = Flask(__name__)
 
 SPORTS = ['basketball', 'soccer', 'frisbee']
-REGISTRANTS = {}
+REGISTRANTS = []
 
 
 @app.route('/')
@@ -25,7 +25,7 @@ def register():
     if sport not in SPORTS:
         return render_template('error.html', message='Invalid sport')
 
-    REGISTRANTS[name] = sport
+    REGISTRANTS.append({'name': name, 'sport': sport})
 
     return redirect('/registrants')
 
